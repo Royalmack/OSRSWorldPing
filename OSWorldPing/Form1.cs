@@ -39,24 +39,14 @@ namespace OSWorldPing
 
         private void startPings()
         {           
-            if (checkBox1.Checked && checkBox2.Checked)
-            {
-                pingAllWorlds();
-            }
-
+            if (checkBox1.Checked && checkBox2.Checked)            
+                pingAllWorlds();  
             else if (checkBox1.Checked)
-            {
                 pingFreeWorlds();
-            }
-
-            else if(checkBox2.Checked)
-            {
-                pingMemberWorlds();
-            }
-            else
-            {
-                textBox1.Text += "Please select a box!\r\n";
-            }            
+            else if(checkBox2.Checked)            
+                pingMemberWorlds();            
+            else            
+                textBox1.Text += "Please select a box!\r\n";                       
         }
 
         private void pingFreeWorlds()
